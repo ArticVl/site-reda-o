@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Redações - Redação Paraná</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Minhas Redações - Redação Paraná</h1>
+            <p>Organize e visualize suas 14 redações do programa</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <!-- Página inicial - Lista de redações -->
+        <div id="home-page">
+            <div class="card">
+                <h2 class="page-title">Minhas Redações</h2>
+                <p>Clique em uma redação para visualizar ou editar.</p>
+                
+                <div class="redacoes-grid" id="redacoes-list">
+                    <!-- As redações serão carregadas aqui via JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Página de visualização/edição de redação -->
+        <div id="redacao-page" class="hidden">
+            <button class="btn back-btn" id="back-btn">← Voltar</button>
+            
+            <div class="card">
+                <h2 class="page-title" id="redacao-title">Redação #1</h2>
+                
+                <div class="redacao-meta">
+                    <div>
+                        <strong>Tema:</strong> <span id="redacao-tema"></span>
+                    </div>
+                    <div>
+                        <strong>Data:</strong> <span id="redacao-data"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="redacao-conteudo">Conteúdo da Redação:</label>
+                    <textarea class="form-control" id="redacao-conteudo" placeholder="Digite o conteúdo da sua redação aqui..."></textarea>
+                </div>
+                
+                <div class="actions">
+                    <button class="btn btn-success" id="save-btn">Salvar Redação</button>
+                    <button class="btn btn-danger" id="delete-btn">Excluir Redação</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
